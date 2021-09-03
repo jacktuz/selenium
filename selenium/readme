@@ -1,0 +1,53 @@
+# python+selenium +HTMLTestRunner自动化测试
+## python 3 +selenium3 +HTMLTestRunner(python3版本)
+### 使用的框架是python自带的unittest。使用ddt数据驱动，Excel管理测试用例
+### bussinses 公共的逻辑模块编写
+###  data存放测试用例，界面定位元素
+###  report存放测试报告
+###   case存放测试用例。
+###  log 存放测试过程中的测试日志
+###  resultpang存放测试过程中的截图
+###  suite  测试用例集
+### util 公共模块
+###   run.py  执行脚本。
+
+
+#导包--ddt
+from ddt import ddt,data
+# import ddt
+#操作步骤：
+# 1、创建含有多个字典的列表
+# 2、使用@ddt注解测试类
+# 3、创建一个方法把数据取出来
+# 4、使用@data注解单元测试用例
+
+
+断言：（简单的用法）
+***assertEqual(first ,second ,msg =None)
+***assertTrue（）
+***assertFalse（）
+***assertIn(first,second,msg = None)与assertNotIn（first，second,msg = None） 注：断言第一个参数是否在第二个参数中，第二个表示参数是否包含第一个参数。
+
+断言：
+assertEqual(a,b，[msg='测试失败时打印的信息'])： 断言a和b是否相等，相等则测试用例通过。
+assertNotEqual(a,b，[msg='测试失败时打印的信息'])： 断言a和b是否相等，不相等则测试用例通过。
+assertTrue(x，[msg='测试失败时打印的信息'])： 断言x是否True，是True则测试用例通过。
+assertFalse(x，[msg='测试失败时打印的信息'])： 断言x是否False，是False则测试用例通过。
+assertIs(a,b，[msg='测试失败时打印的信息'])： 断言a是否是b，是则测试用例通过。
+assertNotIs(a,b，[msg='测试失败时打印的信息'])： 断言a是否是b，不是则测试用例通过。
+assertIsNone(x，[msg='测试失败时打印的信息'])： 断言x是否None，是None则测试用例通过。
+assertIsNotNone(x，[msg='测试失败时打印的信息'])： 断言x是否None，不是None则测试用例通过。
+assertIn(a,b，[msg='测试失败时打印的信息'])： 断言a是否在b中，在b中则测试用例通过。
+assertNotIn(a,b，[msg='测试失败时打印的信息'])： 断言a是否在b中，不在b中则测试用例通过。
+assertIsInstance(a,b，[msg='测试失败时打印的信息'])： 断言a是是b的一个实例，是则测试用例通过。
+assertNotIsInstance(a,b，[msg='测试失败时打印的信息'])： 断言a是是b的一个实例，不是则测试用例通过。
+————————————————
+版权声明：本文为CSDN博主「cherish0123」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/cherish0123/article/details/79339744
+
+
+
+
+
+
+多写写断言~
